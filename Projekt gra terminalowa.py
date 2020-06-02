@@ -399,10 +399,57 @@ def sprawdzenie_sympatii_ludzi():
         reakcje.configure(text = "Nie spodobalo sie jej, ze przez ciebie bedzie kartkowka z tworczosci Slowackiego")
     elif sympatia_ludzi == 3:
         reakcje.configure(text = "Nie spodobalo sie jej, ze nie dosc, ze przyszedles w pizamie, to jeszcze odpyskowales prowadzacemu")#uzupełnia "dialogi"(odpowiedzi?) po zaproponowaniu przyjaźni
+#xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# MINI GRA
+from tkinter import *
+import time
+# from tkinter.ttk import *
+
+#definicja odpowiada za odliczanie 5 sekund
+def rozpoczęcie_odliczania():
+    time.sleep(1)
+    print("START")
+    time.sleep(5)
+    print("STOP")
+
+#definicja odpowiada za zliczanie ilości kliknięć i w zależności od ilości wybór dyscypliny
+liczba = 0
+def kliknięcia(): # without event because I use `command=` instead of `bind`
+    global liczba
+    liczba = liczba + 1
+    if liczba<=10:
+        dyscyplina="Jesteś powolny i dokładny, Twoja dyscyplina to praca w stajni"
+    elif liczba>=20:
+        dyscyplina="Jesteś bardzo szybki, Twoja dyscyplina to wyścigi konne"
+    else:
+        dyscyplina="Jesteś opanowany i spokojny, Twoja dyscyplina to joga na koniach"
+    label1.configure(text=f'STOP! Liczba kliknięć: {liczba} {dyscyplina}')
 
 
+windows = Tk()
+windows.title("Wybór dyscypliny")
+windows.geometry("600x500")
+label = Label(windows, text="To najwyższy czas na zapisanie się na zajęcia wychowania fizycznego. Do wyboru masz trzy dyscypliny:"
+"\n"
+"\n a) praca w stajni"
+"\n b) wyścigi konne"
+"\n c) joga na koniach"
+"\n"
+"\n Sprawdźmy do czego się nadajesz."
+"\n Kiedy będziesz gotowy naciśnij \"START\""
+"\n A następnie wciskaj klawisz \"Naćiśnij\" tak dużo razy jak potrafisz aż do momentu pojawienia STOP.")
 
+label.grid(column=0, row=0)
+label1 = Label(windows, text = "_____________________________")
+label1.grid(column=0, row=6)
+custom_button = Button(windows, text="Naciśnij", command=kliknięcia)
+custom_button.grid(column=0, row=5)
+przycisk_startu=Button(windows, text="START", command=rozpoczęcie_odliczania)
+przycisk_startu.grid(column=0, row=3)
 
+windows.mainloop()
+
+# xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 okno_test = Tk()
 okno_test.title("Testuje przyciski")
 okno_test.geometry("800x300")
