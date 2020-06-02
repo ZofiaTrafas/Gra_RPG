@@ -1,5 +1,7 @@
 import random
-
+from tkinter import *
+from tkinter import messagebox
+from PIL import Image, ImageTk, ImageFilter, ImageFont, ImageDraw
 
 print("Powitanie! Studia blablabla wybory")
 #WYBOR SPOZNIENIE A PIZAMA
@@ -489,6 +491,18 @@ przycisk_3 = Button(okno_test, text = "                                         
 przycisk_3.place(x = 600,y =  150)
 przycisk_3.configure(state = "disabled", bg = "grey")
 
+# def powitanie():
+#     messagebox.showinfo("Powitanie","Witaj! Jesteś studentem I roku Koniowistyki na Uniwerystecie Juliusza Słowackiego.")
+#     messagebox.showinfo("Rada na początek nauki","Okres studiów to najlepszy czas w Twoim życiu. Pamiętaj, żeby go nie zmarnować...")
+
+plotno=Canvas(okno_test, width=400, height=400)
+plotno.pack()
+obraz=Image.open("1.Uniwersytet.jpg")
+obraz=obraz.resize((400,400))
+obrazTk=ImageTk.PhotoImage(obraz)
+plotno.create_image(200,200,image=obrazTk)
+przycisk1=Button(okno_test, text="Powitanie",command=powitanie)
+przycisk1.pack()
 
 
 
