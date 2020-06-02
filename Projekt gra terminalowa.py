@@ -295,19 +295,19 @@ obraz1=obraz1.resize((400,400))
 obrazTk=ImageTk.PhotoImage(obraz1)
 plotno.create_image(400,200,image=obrazTk)
 
-plotno=Canvas(okno_test, width=800,height=400)
-plotno.pack()
-obraz2=Image.open("2.Pokój w akademiku.jpg")
-obraz2=obraz2.resize((400,400))
-obrazTk=ImageTk.PhotoImage(obraz2)
-plotno.create_image(400,200,image=obrazTk)
-
-plotno=Canvas(okno_test, width=800,height=400)
-plotno.pack()
-obraz3=Image.open("3.Zegar.jpg")
-obraz3=obraz3.resize((400,400))
-obrazTk=ImageTk.PhotoImage(obraz3)
-plotno.create_image(400,200,image=obrazTk)
+# plotno=Canvas(okno_test, width=800,height=400)
+# plotno.pack()
+# obraz2=Image.open("2.Pokój w akademiku.jpg")
+# obraz2=obraz2.resize((400,400))
+# obrazTk=ImageTk.PhotoImage(obraz2)
+# plotno.create_image(400,200,image=obrazTk)
+#
+# plotno=Canvas(okno_test, width=800,height=400)
+# plotno.pack()
+# obraz3=Image.open("3.Zegar.jpg")
+# obraz3=obraz3.resize((400,400))
+# obrazTk=ImageTk.PhotoImage(obraz3)
+# plotno.create_image(400,200,image=obrazTk)
 
 def wybor_1():  # wyskakuje po naciśnięciu przycisk_1
     global tura # bez tego nie liczy tur
