@@ -270,3 +270,179 @@ elif wybor_wf == 3:
 
 
 #D R U G I    S E M E S T R
+
+from tkinter import *
+import time
+import os
+
+tura = 0        # napisy i odpowiedzi są przydzielane przyciskom wg. "tury". Opcja_1 = +1 tura Opcja_2 = +10 tur Opcja_3 = +20 tur
+sympatia_ludzi = 0
+
+def wybor_1():  # wyskakuje po naciśnięciu przycisk_1
+    global tura # bez tego nie liczy tur
+    global sympatia_ludzi
+    tura = tura + 1
+    if tura == 1:
+        # tekst.configure - zmienia zmienną "tekst", dzięki temu nie otwiera się nowe okno
+        # wybór nr 1.1 - spóźnienie, co recytwoać? (0+1tura)
+        tekst.configure(text = "(przycisk 1)\nSpozniasz sie na zajecia.\nProwadzacy za kare kaze ci wyrecytowac dzielo Slowackiego. Co recytujesz?")
+        przycisk_1.configure(text = " oda do mlodosci ")
+        przycisk_2.configure(text = " oda do wolnosci ")
+        przycisk_3.configure(text = "                 ")
+    elif tura == 2:
+        # wybór nr 1.2 - Mickiewicz, wybierz przyjaciela (1+1tura)
+        tekst.configure(text = "Poznajesz nowe osobki.\nWybierz przyjaciela")
+        reakcje.configure(text = "(przycisk 1+1; tura 2)\nLudzie nas nie lubią [Mickiewicz]")
+        przycisk_1.configure(text = " alternatywka ")
+        przycisk_2.configure(text = " koniara ")
+        przycisk_3.configure(text = "dżokej", bg = "yellow", state = "normal")
+        sympatia_ludzi = sympatia_ludzi + 1
+    elif tura == 11:
+        #wybór 2.1 - przeproszony prof, wybierz przyjaciela (10+1 tura)
+        tekst.configure(text = "Poznajesz nowe osobki.\nWybierz przyjaciela")
+        reakcje.configure(text = "(przycisk 2+1)\nLudzie nas lubią [przeproszony prof] ")
+        przycisk_1.configure(text = " alternatywka ")
+        przycisk_2.configure(text = " koniara ")
+        przycisk_3.configure(text = "dżokej", bg = "yellow", state = "normal") #"normal" odblokowuje trzeci przycisk
+        sympatia_ludzi = sympatia_ludzi + 4
+    elif tura > 2 and tura < 36:
+        if sympatia_ludzi == 2 or sympatia_ludzi == 4:
+            tekst.configure(text = "Twoim przyjacielem zostaje alternatywka!") #[przycisk: 1+2+1 or 2+1+1 ; tury: 12 ]
+            wybor_przyjaciela = 1
+            sprawdzenie_sympatii_ludzi()
+        elif sympatia_ludzi == 1 or sympatia_ludzi == 3:
+            tekst.configure(text = "Alternatywka nie chce byc twoim przyjacielem! Wybierz kogoś innego.") # [przycisk: 1+1+1 or 2+2+1; tury: 3 or 21]
+            wybor_przyjaciela = 1
+            sprawdzenie_sympatii_ludzi()
+            przycisk_1.configure(state = "disabled")
+            sympatia_ludzi = sympatia_ludzi + 1
+            tura = tura + 1
+    else:
+        tekst.configure(text = ("KONIEC, poziom sympatii wynosi: ",sympatia_ludzi))
+        przycisk_1.configure(state = "disabled", bg = "grey")    # przycisków nie da się dalej naciskać
+        przycisk_2.configure(state = "disabled", bg = "grey")
+        przycisk_3.configure(state = "disabled", bg = "grey")
+
+
+def wybor_2():  # wyskakuje po naciśnięciu przycisk_2
+    global tura
+    global sympatia_ludzi
+    tura = tura + 10
+    if tura == 10:
+        tekst.configure(text = "(przycisk 2)\nProfesorowi sie nie podoba, ze jestes w pizamie. Co wybierasz?")
+        przycisk_1.configure(text = " Przeproś ")
+        przycisk_2.configure(text = " Odpyskuj ")
+        przycisk_3.configure(text = "          ")
+    elif tura == 11:
+        tekst.configure(text = "Poznajesz nowe osobki.\nWybierz przyjaciela")
+        reakcje.configure(text = "(przycisk 1+2)\nLudzie nas lubią [Słowacki]")
+        przycisk_1.configure(text = " alternatywka ")
+        przycisk_2.configure(text = " koniara ")
+        przycisk_3.configure(text = "dżokej", bg = "yellow", state = "normal")
+        sympatia_ludzi = sympatia_ludzi + 2
+    elif tura == 20:
+        tekst.configure(text = "Poznajesz nowe osobki.\nWybierz przyjaciela")
+        reakcje.configure(text = "(przycisk 2+2; tura 11)\nLudzie nas nie lubią [odpyskowany prof]")
+        przycisk_1.configure(text = " alternatywka ")
+        przycisk_2.configure(text = " koniara ")
+        przycisk_3.configure(text = "dżokej", bg = "yellow", state = "normal")
+        sympatia_ludzi = sympatia_ludzi + 3
+    elif tura > 2 and tura < 36:
+        if sympatia_ludzi == 2 or sympatia_ludzi == 4:
+            tekst.configure(text = "Twoim przyjacielem zostaje koniara!")
+            wybor_przyjaciela = 2
+            sprawdzenie_sympatii_ludzi()
+        elif sympatia_ludzi == 1 or sympatia_ludzi == 3:
+            tekst.configure(text = "Koniara nie chce byc twoim przyjacielem! Wybierz kogoś innego.")
+            wybor_przyjaciela = 2
+            sprawdzenie_sympatii_ludzi()
+            przycisk_2.configure(state = "disabled")
+            sympatia_ludzi = sympatia_ludzi + 1
+            tura = tura + 1
+    else:
+        tekst.configure(text = ("KONIEC, poziom sympatii wynosi: ",sympatia_ludzi))
+        przycisk_1.configure(state = "disabled", bg = "grey")
+        przycisk_2.configure(state = "disabled", bg = "grey")
+        przycisk_3.configure(state = "disabled", bg = "grey")
+
+
+def wybor_3():
+    global tura
+    global sympatia_ludzi
+    tura = tura + 20
+    if tura > 2 and tura < 36:
+        if sympatia_ludzi == 2 or sympatia_ludzi == 4:
+            tekst.configure(text = "Twoim przyjacielem zostaje dżokej!")
+            wybor_przyjaciela = 3
+            sprawdzenie_sympatii_ludzi()
+        elif sympatia_ludzi == 1 or sympatia_ludzi == 3:
+            tekst.configure(text = "Dżokej nie chce byc twoim przyjacielem! Wybierz kogoś innego.")
+            wybor_przyjaciela = 3
+            sprawdzenie_sympatii_ludzi()
+            przycisk_3.configure(state = "disabled")
+            sympatia_ludzi = sympatia_ludzi + 1
+            tura = tura + 1
+    else:
+        tekst.configure(text = ("KONIEC, poziom sympatii wynosi: ",sympatia_ludzi))
+        przycisk_1.configure(state = "disabled", bg = "grey")
+        przycisk_2.configure(state = "disabled", bg = "grey")
+        przycisk_3.configure(state = "disabled", bg = "grey")# wyskakuje po naciśnięciu przycisk_3; potrzebny tylko do wyboru przyjaciół, chyba że coś jeszcze w 2sem?
+
+
+def sprawdzenie_sympatii_ludzi():
+    global sympatia_ludzi
+    if sympatia_ludzi == 2:
+        reakcje.configure(text = "Bardzo docenila to, ze znales utwor Slowackiego na zajeciach")
+    elif sympatia_ludzi == 4:
+        reakcje.configure(text = "Spodobalo jej sie, ze pomimo tego, ze przyszedles w pizamie, to potrafiles przeprosic")
+    elif sympatia_ludzi == 1:
+        reakcje.configure(text = "Nie spodobalo sie jej, ze przez ciebie bedzie kartkowka z tworczosci Slowackiego")
+    elif sympatia_ludzi == 3:
+        reakcje.configure(text = "Nie spodobalo sie jej, ze nie dosc, ze przyszedles w pizamie, to jeszcze odpyskowales prowadzacemu")#uzupełnia "dialogi"(odpowiedzi?) po zaproponowaniu przyjaźni
+
+
+
+
+okno_test = Tk()
+okno_test.title("Testuje przyciski")
+okno_test.geometry("800x300")
+
+#WPROWADZENIE - imię i przywitanie - niedziała, nwm czemu, ale jeszcze pobrubuję
+
+# podaj_imie = Entry(okno_test, width = 10)
+# podaj_imie.grid(column = 3, row = 3)
+# podaj_imie.focus()  # nietrzeba klikać na txtbox żeby zacząć pisać
+# imie = podaj_imie.get()
+# podaj_imie.grid_remove()
+#
+# tekst = Label(okno_test, text = ("Cześć", imie, "wprowadzenie"), font = ("Arial Bold", 13))
+# tekst.grid(column = 0, row = 0)
+# time.sleep(3)
+# tekst.configure(text = "Budzisz sie, spozniony na zajecia. Co robisz?")
+
+#START - pierwszy wybór i baza do reszty, jak zadziała to u góry ten będzie zbędny
+
+tekst = Label(okno_test, text = "Budzisz sie, spozniony na zajecia. Co robisz?", font = ("Arial Bold", 13))
+tekst.place(x = 200,y = 50)
+
+#RZECZY POTZREBNE I KONIECZNE :P
+
+#Do notatek/ sprawdzenia czy wszystko działa i uzasadnień przyjaciół
+reakcje = Label(okno_test, text = "")
+reakcje.place(x = 250,y = 200)
+
+#Przycisk_3 jest aktywowany w odpowiednich miejscach w funkcajch wyborów + po wyborze przyjaciół będzie usunięty
+przycisk_1 = Button(okno_test, text = " Spozniasz sie na zajecia ", bg = "yellow", command = wybor_1)
+przycisk_1.place(x = 150,y =  150)
+
+przycisk_2 = Button(okno_test, text = " Idziesz na zajecia w pizamie ", bg = "yellow", command = wybor_2)
+przycisk_2.place(x = 350,y =  150)
+
+przycisk_3 = Button(okno_test, text = "                                          ", bg = "yellow", command = wybor_3)
+przycisk_3.place(x = 600,y =  150)
+przycisk_3.configure(state = "disabled", bg = "grey")
+
+
+
+
+okno_test.mainloop()
