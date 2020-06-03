@@ -290,17 +290,18 @@ okno_test.title("Testuje przyciski")
 #
 plotno=Canvas(okno_test, width=800,height=400)
 plotno.pack()
-obraz1=Image.open("1.Uniwersytet.jpg")
+obraz1=Image.open("1.Uniwersytet.png")
 obraz1=obraz1.resize((400,400))
 obrazTk=ImageTk.PhotoImage(obraz1)
 plotno.create_image(400,200,image=obrazTk)
 
 # plotno=Canvas(okno_test, width=800,height=400)
 # plotno.pack()
-# obraz2=Image.open("2.Pokój w akademiku.jpg")
-# obraz2=obraz2.resize((400,400))
-# obrazTk=ImageTk.PhotoImage(obraz2)
-# plotno.create_image(400,200,image=obrazTk)
+def pokoj():
+    obraz2=Image.open("2.Pokój w akademiku.jpg")
+    obraz2=obraz2.resize((400,400))
+    obrazTk=ImageTk.PhotoImage(obraz2)
+    plotno.create_image(400,200,image=obrazTk)
 #
 # plotno=Canvas(okno_test, width=800,height=400)
 # plotno.pack()
