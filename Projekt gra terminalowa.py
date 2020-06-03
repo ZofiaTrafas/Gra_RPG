@@ -18,23 +18,23 @@ def wybor_1():  # wyskakuje po naciśnięciu przycisk_1
     if tura == 1:
         # tekst.configure - zmienia zmienną "tekst", dzięki temu nie otwiera się nowe okno
         # wybór nr 1.1 - spóźnienie, co recytwoać? (0+1tura)
-        tekst.configure(text = "(przycisk 1)\nSpozniasz sie na zajecia.\nProwadzacy za kare kaze ci wyrecytowac dzielo Slowackiego. Co recytujesz?")
-        przycisk_1.configure(text = " oda do wolnosci ")
-        przycisk_2.configure(text = " oda do mlodosci ")
+        tekst.configure(text ="(przycisk 1)\n Wchodząc do sali zatrzymuje Cię oburzony wykładowca.\n \"Na moje zajęcia nikt się nie spóźnia!\" - mówi - \"Czy Ty wiesz na jakim Uniwersytecie studiujesz? \n Na Uniwersytecie Juliusza Słowackiego! Proszę mi w takim razie wyrecytować jego utwór.\" \n ""Co wybierasz?")
+        przycisk_1.configure(text = " Oda do wolności ")
+        przycisk_2.configure(text = " Oda do młodości ")
         przycisk_3.configure(text = "                 ")
     elif tura == 2 and sympatia_ludzi == 0:
-        tekst.configure(text = "Poznajesz nowe osobki.\nWybierz przyjaciela")
+        tekst.configure(text = "Następnego dnia przychodzisz na uczelnie trochę za wcześnie, \n ale to dobry moment, by poznać nowych przyjaciół.\nWybierz z kim chcesz nawiązać kontakt")
         reakcje.configure(text = "(przycisk 1+2)\nLudzie nas lubią [Słowacki]")
-        przycisk_1.configure(text = " alternatywka ")
-        przycisk_2.configure(text = " koniara ")
-        przycisk_3.configure(text = "dżokej", bg = "yellow", state = "normal")
+        przycisk_1.configure(text = " Alternatywka ")
+        przycisk_2.configure(text = " Koniara ")
+        przycisk_3.configure(text = "Dżokej", bg = "yellow", state = "normal")
         sympatia_ludzi = sympatia_ludzi + 2
     elif tura == 3 and sympatia_ludzi == 0:
-        tekst.configure(text = "Poznajesz nowe osobki.\nWybierz przyjaciela")
+        tekst.configure(text = "Następnego dnia przychodzisz na uczelnie trochę za wcześnie, \n ale to dobry moment, by poznać nowych przyjaciół.\nWybierz z kim chcesz nawiązać kontakt")
         reakcje.configure(text = "(przycisk 2+2; tura 11)\nLudzie nas nie lubią [odpyskowany prof]")
-        przycisk_1.configure(text = " alternatywka ")
-        przycisk_2.configure(text = " koniara ")
-        przycisk_3.configure(text = "dżokej", bg = "yellow", state = "normal")
+        przycisk_1.configure(text = " Alternatywka ")
+        przycisk_2.configure(text = " Koniara ")
+        przycisk_3.configure(text = "Dżokej", bg = "yellow", state = "normal")
         sympatia_ludzi = sympatia_ludzi + 3
     elif tura > 2 and tura < 6:
         if sympatia_ludzi == 2 or sympatia_ludzi == 4:
@@ -70,23 +70,23 @@ def wybor_2():  # wyskakuje po naciśnięciu przycisk_2
     global sympatia_ludzi
     tura = tura + 2
     if tura == 2:
-        tekst.configure(text = "(przycisk 2)\nProfesorowi sie nie podoba, ze jestes w pizamie. Co wybierasz?")
-        przycisk_1.configure(text = " Odpyskuj ")
-        przycisk_2.configure(text = " Przeproś ")
+        tekst.configure(text ="(przycisk 2)\n Wchodząc do sali zatrzymuje Cię oburzony wykładowca. \n  \"Czy Ty sobie kpisz z moich zajęć?\" -mówi - \"Jak bezczelnym trzeba być, żeby przyjść tak ubranym?\" \n Co odpowiadasz?")
+        przycisk_1.configure(text = "Będę się ubierać jak chcę. ")
+        przycisk_2.configure(text = " Przepraszam Profesorze ")
         przycisk_3.configure(text = "          ")
     elif tura == 3 and sympatia_ludzi == 0:
-        tekst.configure(text = "Poznajesz nowe osobki.\nWybierz przyjaciela")
+        tekst.configure(text ="Następnego dnia przychodzisz na uczelnie trochę za wcześnie, \n ale to dobry moment, by poznać nowych przyjaciół.\nWybierz z kim chcesz nawiązać kontakt")
         reakcje.configure(text = "(przycisk 1+1; tura 2)\nLudzie nas nie lubią [Mickiewicz]")
-        przycisk_1.configure(text = " alternatywka ")
-        przycisk_2.configure(text = " koniara ")
-        przycisk_3.configure(text = "dżokej", bg = "yellow", state = "normal")
+        przycisk_1.configure(text = " Alternatywka ")
+        przycisk_2.configure(text = " Koniara ")
+        przycisk_3.configure(text = "Dżokej", bg = "yellow", state = "normal")
         sympatia_ludzi = sympatia_ludzi + 1
     elif tura == 4 and sympatia_ludzi == 0:
-        tekst.configure(text = "Poznajesz nowe osobki.\nWybierz przyjaciela")
+        tekst.configure(text ="Następnego dnia przychodzisz na uczelnie trochę za wcześnie, \n ale to dobry moment, by poznać nowych przyjaciół.\nWybierz z kim chcesz nawiązać kontakt")
         reakcje.configure(text = "(przycisk 2+1)\nLudzie nas lubią [przeproszony prof] ")
-        przycisk_1.configure(text = " alternatywka ")
-        przycisk_2.configure(text = " koniara ")
-        przycisk_3.configure(text = "dżokej", bg = "yellow", state = "normal") #"normal" odblokowuje trzeci przycisk
+        przycisk_1.configure(text = " Alternatywka ")
+        przycisk_2.configure(text = " Koniara ")
+        przycisk_3.configure(text = "Dżokej", bg = "yellow", state = "normal") #"normal" odblokowuje trzeci przycisk
         sympatia_ludzi = sympatia_ludzi + 4
 
     elif tura > 1 and tura <= 6:
@@ -112,7 +112,7 @@ def wybor_2():  # wyskakuje po naciśnięciu przycisk_2
             tura = tura + 1
 
     elif tura == 8:
-        tekst.configure(text = "To najwyższy czas na zapisanie się na zajęcia wychowania fizycznego. Do wyboru masz trzy dyscypliny:"
+        tekst.configure(text = "To najwyższy czas na zapisanie się na zajęcia wychowania fizycznego. \n Do wyboru masz trzy dyscypliny:"
         "\n a) praca w stajni"
         "\n b) wyścigi konne"
         "\n c) joga na koniach"
@@ -237,7 +237,10 @@ okno_test.geometry("800x300")
 
 #START - pierwszy wybór i baza do reszty, jak zadziała to u góry ten będzie zbędny
 
-tekst = Label(okno_test, text = "Budzisz sie, spozniony na zajecia. Co robisz?", font = ("Arial Bold", 13))
+tekst = Label(okno_test, text = "Jest ranek, budzisz się 10 min przed zajęciami."
+"\n Możesz iść na uczelnie w piżamie (w ten sposób się nie spóźnisz),"
+"\n albo ubrać się i spóźnić 5 min."
+"Co wybierasz?" ("Arial Bold", 13))
 tekst.place(x = 200,y = 50)
 
 #RZECZY POTZREBNE I KONIECZNE :P
@@ -247,10 +250,10 @@ reakcje = Label(okno_test, text = "")
 reakcje.place(x = 250,y = 200)
 
 #Przycisk_3 jest aktywowany w odpowiednich miejscach w funkcajch wyborów + po wyborze przyjaciół będzie usunięty
-przycisk_1 = Button(okno_test, text = " Spozniasz sie na zajecia ", bg = "yellow", command = wybor_1)
+przycisk_1 = Button(okno_test, text = "Wolę się ubrać!", bg = "yellow", command = wybor_1)
 przycisk_1.place(x = 150,y =  150)
 
-przycisk_2 = Button(okno_test, text = " Idziesz na zajecia w pizamie ", bg = "yellow", command = wybor_2)
+przycisk_2 = Button(okno_test, text = "Pójdę w piżamie.", bg = "yellow", command = wybor_2)
 przycisk_2.place(x = 350,y =  150)
 
 przycisk_3 = Button(okno_test, text = "                                          ", bg = "yellow", command = wybor_3)
