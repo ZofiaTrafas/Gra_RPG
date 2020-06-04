@@ -90,12 +90,12 @@ def wybor_1():  # wyskakuje po naciśnięciu przycisk_1
             reakcje.configure(text = " ")
             przycisk_1.configure(text = "tak")
             przycisk_2.configure(text = "nie")
-    elif tura = 17:
+    elif tura == 17:
         test.configure(text = " Super uwu ")
         przycisk_1.configure(state = "disabled", text = "      ", bg = "grey", command = egzamin_1)
         przycisk_2.configure(text = "Nadeszla sesja. Masz egzamin", bg = "green", command = egzamin_2)
 
-        
+
 
 def wybor_2():  # wyskakuje po naciśnięciu przycisk_2
     global tura
@@ -155,7 +155,7 @@ def wybor_2():  # wyskakuje po naciśnięciu przycisk_2
         przycisk_2.configure(state = "normal", text = "START", bg = "yellow")
         przycisk_3.configure(state = "normal", text = "Przejdź dalej" ,bg = "grey")
         dodaje_przycisk()
-        
+
     elif tura >= 13 and tura <= 16:
         if tura == 12:
             tura = tura + 4
@@ -169,7 +169,7 @@ def wybor_2():  # wyskakuje po naciśnięciu przycisk_2
         przycisk_1.configure(text = "tak")
         przycisk_2.configure(text = "nie")
         przycisk_start.configure(state = "disabled", bg = "grey")
-    elif tura = 17:
+    elif tura == 17:
         test.configure(text = "słabo")
         przycisk_1.configure(state = "disabled", text = "      ", bg = "grey")
         przycisk_2.configure(text = "czas na egazamin", bg = "green", command = egzamin_2)
@@ -206,8 +206,8 @@ def wybor_3():
         reakcje.configure(text = " ")
         przycisk_1.configure(state = "normal", text = " piwo ", bg = "yellow")
         przycisk_2.configure(text = "wykład")
-        przycisk_3.configure(text = "      ", state = "disabled", bg = "grey")            
-        
+        przycisk_3.configure(text = "      ", state = "disabled", bg = "grey")
+
 
 def sprawdzenie_sympatii_ludzi():
     global sympatia_ludzi
