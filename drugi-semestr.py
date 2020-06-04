@@ -12,6 +12,8 @@ elif prowadzacy == 2:
 #To jest "fałyszywy wybór, aby nadać poczucie normalnosci,
 #ale sie nie liczy, wiec guziki to moga byc falszywki"
 
+
+#TUTAJ MOGŁABY BYĆ ZMIANA MUZYKI I W OGÓLE CHARAKTERU, BO ROBI SIĘ CREEPY
 #Tutaj obrazek z pociągiem.
 #Mi by bardziej w koncepcji pasowało dać tylko napis "którą opcję wbierasz?
 # i klasyczny obrazek z tego dylematu, tylko że dodać na nim np. a i b
