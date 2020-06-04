@@ -2,7 +2,7 @@ import random
 from tkinter import *
 from tkinter import messagebox
 from PIL import Image, ImageTk, ImageFilter, ImageFont, ImageDraw
-
+#sprawdzam cos
 
 from tkinter import *
 import time
