@@ -150,7 +150,7 @@ def wybor_2():  # wyskakuje po naciśnięciu przycisk_2
         "\n c) joga na koniach"
         "\n Sprawdźmy do czego się nadajesz."
         "\n Kiedy będziesz gotowy naciśnij \"START\""
-        "\n A następnie wciskaj klawisz \"Naćiśnij\" tak dużo razy jak potrafisz aż do momentu pojawienia STOP.")
+        "\n A następnie wciskaj klawisz \"Naćiśnij\" tak dużo razy jak potrafisz aż do momentu pojawienia się STOP.")
         przycisk_1.configure(state = "disabled",text = "             " ,bg = "grey")
         przycisk_2.configure(state = "normal", text = "START", bg = "yellow")
         przycisk_3.configure(state = "normal", text = "Przejdź dalej" ,bg = "grey")
