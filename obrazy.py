@@ -456,3 +456,105 @@ def main():
 main()
 
 #####################################################
+
+"""
+TO MINI GRA, KTÓRA MIAŁA NA CELU ZAPISANIE SIĘ NA WF POPRZEZ ILOŚĆ KLIKNIĘĆ W PRZYCISK NA KLAWIATURZE, ALE NIE UDAŁO NAM SIĘ JEJ WSTAWIĆ :(
+from tkinter import *
+import time
+# from tkinter.ttk import *
+
+#definicja odpowiada za odliczanie 5 sekund
+def rozpoczęcie_odliczania():
+    time.sleep(1)
+    print("START")
+    time.sleep(5)
+    print("STOP")
+
+#definicja odpowiada za zliczanie ilości kliknięć i w zależności od ilości wybór dyscypliny
+liczba = 0
+def kliknięcia(): # without event because I use `command=` instead of `bind`
+    global liczba
+    liczba = liczba + 1
+    if liczba<=10:
+        dyscyplina="Jesteś powolny i dokładny, Twoja dyscyplina to praca w stajni"
+    elif liczba>=20:
+        dyscyplina="Jesteś bardzo szybki, Twoja dyscyplina to wyścigi konne"
+    else:
+        dyscyplina="Jesteś opanowany i spokojny, Twoja dyscyplina to joga na koniach"
+    label1.configure(text=f'STOP! Liczba kliknięć: {liczba} {dyscyplina}')
+
+
+windows = Tk()
+windows.title("Wybór dyscypliny")
+windows.geometry("600x500")
+label = Label(windows, text="To najwyższy czas na zapisanie się na zajęcia wychowania fizycznego. Do wyboru masz trzy dyscypliny:"
+"\n"
+"\n a) praca w stajni"
+"\n b) wyścigi konne"
+"\n c) joga na koniach"
+"\n"
+"\n Sprawdźmy do czego się nadajesz."
+"\n Kiedy będziesz gotowy naciśnij \"START\""
+"\n A następnie wciskaj klawisz \"Naćiśnij\" tak dużo razy jak potrafisz aż do momentu pojawienia STOP.")
+
+label.grid(column=0, row=0)
+label1 = Label(windows, text = "_____________________________")
+label1.grid(column=0, row=6)
+custom_button = Button(windows, text="Naciśnij", command=kliknięcia)
+custom_button.grid(column=0, row=5)
+przycisk_startu=Button(windows, text="START", command=rozpoczęcie_odliczania)
+przycisk_startu.grid(column=0, row=3)
+
+windows.mainloop()
+################################################################################################################
+
+A TO ODTWARZACZ MUZYKI, KTÓREGO TEŻ NIE UDAŁO SIĘ WSTAWIĆ :(
+
+import pygame
+import tkinter as tkr
+
+def play():
+    pygame.init()
+    pygame.mixer.init()
+    pygame.mixer.music.load(file)
+    pygame.mixer.music.play()
+    pygame.mixer.music.set_volume(VolumeLevel.get())
+    print(pygame.mixer.music.get_volume())
+    print(VolumeLevel.get())
+
+def stop():
+    pygame.mixer.music.stop()
+
+def pause():
+    pygame.mixer.music.pause()
+
+def unpause():
+    pygame.mixer.music.unpause()
+
+odtwarzacz=tkr.Tk()
+odtwarzacz.title("Odtwarzacz muzyki")
+odtwarzacz.geometry("300x300")
+
+VolumeLevel = tkr.Scale(odtwarzacz, from_=0.0, to_=1.0, orient=tkr.HORIZONTAL, resolution=0.1)
+
+file="Video - Asele (lyrics) napisy PL.mp3"
+
+Przycisk1 = tkr.Button(odtwarzacz, width=5, heigh=3, text="Play", command=play)
+Przycisk1.pack(fill="x")
+Przycisk2 = tkr.Button(odtwarzacz, width=5, heigh=3, text="Stop", command=stop)
+Przycisk2.pack(fill="x")
+Przycisk3 = tkr.Button(odtwarzacz, width=5, heigh=3, text="Zatrzymaj", command=pause)
+Przycisk3.pack(fill="x")
+Przycisk4 = tkr.Button(odtwarzacz, width=5, heigh=3, text="Wznów", command=unpause)
+Przycisk4.pack(fill="x")
+VolumeLevel.pack(fill="x")
+
+label1 = tkr.LabelFrame(odtwarzacz, text="Nazwa piosenki")
+label1.pack(fill="both", expand="yes")
+contents1=tkr.Label(label1, text=file)
+contents1.pack()
+
+odtwarzacz.mainloop()
+
+"""
+
