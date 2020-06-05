@@ -16,10 +16,10 @@ class Picture:
         obraz.image = obraz
         self.label.pack()
 
-        self.pole_tekstowe=Label(self.parent, text="Witaj na uniwersytecie! Studia to czas wyborów bla bla bla",background='white')
-        self.pole_tekstowe.place(x=280, y=400)
+        self.pole_tekstowe=Label(self.parent, text="Witaj! Jesteś studentem I roku Koniowistyki na Uniwersytecie Juliusza Słowackiego.",background='white')
+        self.pole_tekstowe.place(x=180, y=400)
 
-        self.przycisk_1=Button(self.parent, command=self.obraz2, text='Witaj na uniwerku! Studia to czas wyborów', bg='yellow')
+        self.przycisk_1=Button(self.parent, command=self.obraz2, text='Okres studiów to najlepszy czas w Twoim życiu. Pamiętaj, żeby go nie zmarnować...', bg='yellow')
         # self.przycisk_1.place(x=0,y=0)
         self.przycisk_1.pack()
 
@@ -28,8 +28,8 @@ class Picture:
         self.label['image']=obraz1
         obraz1.image=obraz1
 
-        self.pole_tekstowe.configure(text="To znowu ty... A więc po raz koljny witamy..") #tutaj będą wracać jeśli będą chcieli zacząć
-        self.przycisk_1.configure(text="Już wiesz co masz robić...",command=self.obraz2)  # jeszcze raz jakby co Asia, więc mozesz im tu jakąś gadkę strzelić
+        self.pole_tekstowe.configure(text="To znowu Ty... A więc po raz kolejny witamy..") #tutaj będą wracać jeśli będą chcieli zacząć
+        self.przycisk_1.configure(text="Masz kolejną szansę. Tym razem postaraj się trochę bardziej.\n Powodzenia",command=self.obraz2)  # jeszcze raz jakby co Asia, więc mozesz im tu jakąś gadkę strzelić
         self.przycisk_2.destroy()
 
     def obraz2(self):
@@ -37,7 +37,7 @@ class Picture:
         self.label['image']=obraz2
         obraz2.image=obraz2
 
-        self.pole_tekstowe.configure(text="Budzisz się w swoim pokoju w akademiku")
+        self.pole_tekstowe.configure(text="Jest ranek. Budzisz się w swoim pokoju w akademiku")
         self.przycisk_1.configure(text="Sprawdź, która godzina",command=self.obraz3)
 
 
@@ -46,10 +46,10 @@ class Picture:
         self.label['image']=obraz3
         obraz3.image=obraz3
 
-        self.pole_tekstowe.configure(text="O nie! Za 5 minut zaczynasz zajęcia!\nJak pójdziesz w piżamie to zdążysz.\nJak zdecydujesz się ubrać to się spóźnisz.\nCo robisz?")
-        self.przycisk_1.configure(text="Spóźnienie",command=self.obraz4)
+        self.pole_tekstowe.configure(text="Masz 10 min do zajęć. \n Możesz iść na uczelnie w piżamie (w ten sposób się nie spóźnisz), \n albo ubrać się i spóźnić 5 min. Co wybierasz?")
+        self.przycisk_1.configure(text="Wolę się ubrać! \n 5 min spóźnienia chyba mi nie zaszkodzi",command=self.obraz4)
 
-        self.przycisk_2 = Button(self.parent, text = "   Piżama   ", bg = "yellow", command=self.obraz5)
+        self.przycisk_2 = Button(self.parent, text = "Nie chcę się spóźnić pierwszego dnia, \n więc pójdę w piżamie ", bg = "yellow", command=self.obraz5)
         # self.przycisk_2.place(x=0,y=0)
         self.przycisk_2.configure(state='normal')
         self.przycisk_2.pack()
@@ -59,8 +59,8 @@ class Picture:
         self.label['image']=obraz4
         obraz4.image=obraz4
 
-        self.pole_tekstowe.configure(text="Spózniasz się! Profesor jest zły. Sprawdź jakie ma dla cb zadanie")
-        self.przycisk_1.configure(text="Zadanie",command=self.obraz6)
+        self.pole_tekstowe.configure(text="Wchodząc do sali zatrzymuje Cię oburzony wykładowca.\n \"Na moje zajęcia nikt się nie spóźnia!\" - mówi -\n \"Czy Ty wiesz na jakim Uniwersytecie studiujesz?\n Na Uniwersytecie Juliusza Słowackiego! \nProszę mi w takim razie wyrecytować jego utwór.\"")
+        self.przycisk_1.configure(text="Wybierz utwór do recytacji",command=self.obraz6)
         self.przycisk_2.configure(text="              ", state='disabled', bg = "grey")
 
     def obraz5(self):
@@ -68,8 +68,8 @@ class Picture:
         self.label['image']=obraz5
         obraz5.image=obraz5
 
-        self.pole_tekstowe.configure(text="Uadło ci się zdążyć na zajęcia! Profesor coś do ciebie mówi")
-        self.przycisk_1.configure(text="Posłuchaj Profesora ", command = self.obraz9)
+        self.pole_tekstowe.configure(text="Wchodząc do sali zatrzymuje Cię oburzony wykładowca.\n \"Czy Ty sobie kpisz z moich zajęć?\" -mówi -\n \"Jak bezczelnym trzeba być, żeby przyjść tak ubranym?\"")
+        self.przycisk_1.configure(text="Odpowiedz", command = self.obraz9)
         self.przycisk_2.configure(text="                                    ", state='disabled', bg = "grey")
 
     def obraz6(self):
@@ -77,7 +77,7 @@ class Picture:
         self.label['image']=obraz6
         obraz6.image=obraz6
 
-        self.pole_tekstowe.configure(text="Masz wyrecytować Słowackiego!\nMasz do wyboru 2 dzieła!\nTylko się nie pomyl, bo możesz stać się pośmiewiskiem....")
+        self.pole_tekstowe.configure(text="Wybierz utwór Słowackiego. \nTylko się nie pomyl, bo możesz stać się pośmiewiskiem....")
         self.przycisk_1.configure(text="Oda do młodości",command=self.obraz8)
         self.przycisk_2.configure(text="Oda do wolności",state='normal',bg="yellow",command=self.obraz7)
 
@@ -86,8 +86,8 @@ class Picture:
         self.label['image']=obraz7
         obraz7.image=obraz7
 
-        self.pole_tekstowe.configure(text="Masz szczęście... Przynajmniej znasz swojego patrona.\nKoniec zajęć - idźcie się zapoznać")
-        self.przycisk_1.configure(text="Idź poznać ludzi", command = self.obraz12)
+        self.pole_tekstowe.configure(text="\"No przynajmniej masz jakąś wiedzę. Siadaj\" - wzdycha wykładowca")
+        self.przycisk_1.configure(text="Następny krok", command = self.obraz12)
         self.przycisk_2.configure(text="                              ", state="disabled",bg="grey")
 
     def obraz8(self):
@@ -95,8 +95,8 @@ class Picture:
         self.label['image']=obraz8
         obraz8.image=obraz8
 
-        self.pole_tekstowe.configure(text="To jakaś kpina! Nawet nie wiesz co napisał nasz patron?!\nKażdy wie, że \"Odę do młodości\" napisał Mieckiwcz...\nPowodzenia przy poznawaniu ludzi niedouczony człowieku")
-        self.przycisk_1.configure(text="Idź poznać ludzi", command = self.obraz40)
+        self.pole_tekstowe.configure(text="To jakaś kpina! Nawet nie wiesz co napisał nasz patron?!\nKażdy wie, że \"Odę do młodości\" napisał Mieckiwcz...\n Mam nadzieję, że to ostatni raz! Powodzenia przy poznawaniu ludzi niedouczony człowieku")
+        self.przycisk_1.configure(text="Następny krok", command = self.obraz40)
         self.przycisk_2.configure(text="                              ", state="disabled",bg="grey")
 
     def obraz9(self):
@@ -104,17 +104,17 @@ class Picture:
         self.label['image']=obraz9
         obraz9.image=obraz9
 
-        self.pole_tekstowe.configure(text="Profesorowi nie podoba się, że przyszedłes na zajęcia w piżamie...")
-        self.przycisk_1.configure(text="Przeproś", command = self.obraz11)
-        self.przycisk_2.configure(text="Odpyskuj", command = self.obraz10, state="normal", bg="yellow")
+        self.pole_tekstowe.configure(text="Wchodząc do sali zatrzymuje Cię oburzony wykładowca.\n \"Czy Ty sobie kpisz z moich zajęć?\" -mówi -\n \"Jak bezczelnym trzeba być, żeby przyjść tak ubranym?\"")
+        self.przycisk_1.configure(text="Przepraszam Profesorze", command = self.obraz11)
+        self.przycisk_2.configure(text="Będę się ubierać jak chce \n i nic nikomu do tego!", command = self.obraz10, state="normal", bg="yellow")
 
     def obraz10(self):
         obraz10= PhotoImage(file="8.1.Odpyskowanie.png",width=600,height=500)
         self.label['image']=obraz10
         obraz10.image=obraz10
 
-        self.pole_tekstowe.configure(text="Oj... Chyba wkurzyłeś profesora...\nPowodzenia przy znajdowaniu przyjaciół..")
-        self.przycisk_1.configure(text="Idź poznać ludzi", command = self.obraz41)
+        self.pole_tekstowe.configure(text="Oj... Chyba wkurzyłeś profesora...\n Powodzenia przy znajdowaniu przyjaciół..")
+        self.przycisk_1.configure(text="Następny krok", command = self.obraz41)
         self.przycisk_2.configure(text="                              ", state="disabled",bg="grey")
 
     def obraz11(self):
@@ -122,8 +122,8 @@ class Picture:
         self.label['image']=obraz11
         obraz11.image=obraz11
 
-        self.pole_tekstowe.configure(text="Masz szczęście...\n Może znajdziesz jakiegoś przyjaciela..")
-        self.przycisk_1.configure(text="Idź poznać ludzi", command = self.obraz12)
+        self.pole_tekstowe.configure(text="Masz szczęście...\n Może znajdziesz jakiegoś przyjaciela...")
+        self.przycisk_1.configure(text="Następny krok", command = self.obraz12)
         self.przycisk_2.configure(text="                              ", state="disabled",bg="grey")
 
     def obraz12(self): #PODWÓJNE - DOBRE MIEJSCE NA ZACZĘCIE WYBORU PRZYJACIELA
@@ -131,7 +131,7 @@ class Picture:
         self.label['image']=obraz12
         obraz12.image=obraz12
 
-        self.pole_tekstowe.configure(text="Wybierz przyjaciela!")
+        self.pole_tekstowe.configure(text="Do następnego wykładu zostało kilka minut. \n To dobry czas, aby poznać kogoś nowego. \n Wybierz z kim chcesz nawiązać kontakt!")
         self.przycisk_1.configure(text="Alternatywka", command = self.obraz13)
         self.przycisk_2.configure(text="Koniara", command = self.obraz14, state="normal",bg="yellow")
 
@@ -144,7 +144,7 @@ class Picture:
         self.label['image']=obraz40
         obraz40.image=obraz40
 
-        self.pole_tekstowe.configure(text="Wybierz przyjaciela!\nNo chyba, że wyrecytowałeś Mickiewicza...to cud jeśli kogokolwiek znajdziesz..\nZdaje się, że tylko dżokej był wyrozumiały")
+        self.pole_tekstowe.configure(text="Do następnego wykładu zosrało kilka minut.\n To dobry czas, aby poznać kogoś nowego! \nNo chyba, że wyrecytowałeś Mickiewicza...to cud jeśli kogokolwiek znajdziesz..\nZdaje się, że tylko dżokej był wyrozumiały")
         self.przycisk_1.configure(text="Alternatywka", state="disabled")
         self.przycisk_2.configure(text="Koniara", state="disabled",bg="yellow")
 
@@ -157,7 +157,7 @@ class Picture:
         self.label['image']=obraz41
         obraz41.image=obraz41
 
-        self.pole_tekstowe.configure(text="Wybierz przyjaciela!\nAlternatywce nie spodobało się jak odpyskowałeś profesorowi..\nZ jej strony nie licz na przyjaźń")
+        self.pole_tekstowe.configure(text="Do następnego wykładu zostało kilka minut. \n To dobry czas, aby poznać kogoś nowego. \n Jednak alternatywce nie spodobało się jak odpyskowałeś profesorowi..\nZ jej strony nie licz na przyjaźń")
         self.przycisk_1.configure(text="Alternatywka", state='disabled')
         self.przycisk_2.configure(text="Koniara", command = self.obraz14, state="normal",bg="yellow")
 
@@ -170,8 +170,8 @@ class Picture:
         self.label['image']=obraz13
         obraz13.image=obraz13
 
-        self.pole_tekstowe.configure(text="Alternatywka zostaje twoim przyjacielem!")
-        self.przycisk_1.configure(text="To co studenci lubią najbardziej!Czas zapisać się na wf :)", command = self.obraz16)
+        self.pole_tekstowe.configure(text="Alternatywka zostaje Twoim przyjacielem!")
+        self.przycisk_1.configure(text="To najwyższy czas, żeby zapisać się na wf :)", command = self.obraz16)
         self.przycisk_2.configure(text="                 ", state="disabled", bg="grey")
         self.przycisk_3.destroy()
 
@@ -180,8 +180,8 @@ class Picture:
         self.label['image']=obraz14
         obraz14.image=obraz14
 
-        self.pole_tekstowe.configure(text="Koniara zostaje twoim przyjacielem!")
-        self.przycisk_1.configure(text="To co studenci lubią najbardziej!Czas zapisać się na wf :)", command = self.obraz16,state='normal')
+        self.pole_tekstowe.configure(text="Koniara zostaje Twoim przyjacielem!")
+        self.przycisk_1.configure(text="To najwyższy czas, żeby zapisać się na wf :)", command = self.obraz16,state='normal')
         self.przycisk_2.configure(text="                 ", state="disabled", bg="grey")
         self.przycisk_3.destroy()
 
@@ -190,8 +190,8 @@ class Picture:
         self.label['image']=obraz15
         obraz15.image=obraz15
 
-        self.pole_tekstowe.configure(text="Dżokej zostaje twoim przyjacielem!")
-        self.przycisk_1.configure(text="To co studenci lubią najbardziej!Czas zapisać się na wf :)", command = self.obraz16,state='normal')
+        self.pole_tekstowe.configure(text="Dżokej zostaje Twoim przyjacielem!")
+        self.przycisk_1.configure(text="To najwyższy czas, żeby zapisać się na wf :)", command = self.obraz16,state='normal')
         self.przycisk_2.configure(text="                 ", state="disabled", bg="grey")
         self.przycisk_3.destroy()
 
@@ -200,7 +200,7 @@ class Picture:
         self.label['image']=obraz16
         obraz16.image=obraz16
 
-        self.pole_tekstowe.configure(text="Zapis na w-f")
+        self.pole_tekstowe.configure(text="Zapisz się na w-f")
         self.przycisk_1.configure(text="Joga na koniach",command=self.obraz18)
         self.przycisk_2.configure(text="Wyścigi konne", state="normal", bg="yellow",command=self.obraz19)
 
@@ -213,7 +213,7 @@ class Picture:
         self.label['image']=obraz17
         obraz17.image=obraz17
 
-        self.pole_tekstowe.configure(text="Praca w stajni\nWybrałeś już wf czas iść na wykład... a może na piwo?")
+        self.pole_tekstowe.configure(text="Gratulacje! Udało Ci się zapisać na pracę w stajni.\n Za chwilę masz wykład z profesorem Czereśniowskim, \n ale przyjaciel zaprasza Cię na piwo. Co wybierasz?")
         self.przycisk_1.configure(text="Piwo", command=self.obraz20)
         self.przycisk_2.configure(text="wykład", bg="yellow", command=self.obraz21)
         self.przycisk_3.destroy()
@@ -223,7 +223,7 @@ class Picture:
         self.label['image']=obraz18
         obraz18.image=obraz18
 
-        self.pole_tekstowe.configure(text="Joga\nWybrałeś już wf czas iść na wykład... a może na piwo?")
+        self.pole_tekstowe.configure(text="Gratulacje! Udało Ci się zapisać na jogę na koniach.\n  Za chwilę masz wykład z profesorem Czereśniowskim,\n ale przyjaciel zaprasza Cię na piwo. Co wybierasz?")
         self.przycisk_1.configure(text="Piwo", command=self.obraz20)
         self.przycisk_2.configure(text="wykład", bg="yellow", command=self.obraz21)
         self.przycisk_3.destroy()
@@ -233,7 +233,7 @@ class Picture:
         self.label['image']=obraz19
         obraz19.image=obraz19
 
-        self.pole_tekstowe.configure(text="Wyścigi konne\nWybrałeś już wf czas iść na wykład... a może na piwo?")
+        self.pole_tekstowe.configure(text="Gratulacje! Udało Ci się zapisać na wyścigi konne.\n Za chwilę masz wykład z profesorem Czereśniowskim,\n ale przyjaciel zaprasza Cię na piwo. Co wybierasz?")
         self.przycisk_1.configure(text="Piwo", command=self.obraz20)
         self.przycisk_2.configure(text="wykład", bg="yellow", command=self.obraz21)
         self.przycisk_3.destroy()
@@ -243,7 +243,7 @@ class Picture:
         self.label['image']=obraz20
         obraz20.image=obraz20
 
-        self.pole_tekstowe.configure(text="Poszedłeś na piwo! To teraz czas na wykład... a może jedak jeszcze jedno?")
+        self.pole_tekstowe.configure(text="Po wypiciu piwa Twój przyjaciel proponuje kolejne.\n Wypijesz je czy wrócisz na wykład?")
         self.przycisk_1.configure(text="piwo", command=self.obraz42)
         self.przycisk_2.configure(text="wykład", command=self.obraz21)
 
@@ -252,7 +252,7 @@ class Picture:
         self.label['image']=obraz42
         obraz42.image=obraz42
 
-        self.pole_tekstowe.configure(text="Serio? Znowu...\nTo teraz czas na wykład... a może jedak jeszcze jedno?")
+        self.pole_tekstowe.configure(text="Serio? Znowu...\nTo teraz już chyba czas na wykład... a może jedak jeszcze jedno?")
         self.przycisk_1.configure(text="piwo", command=self.obraz43)
         self.przycisk_2.configure(text="wykład", command=self.obraz21)
 
@@ -261,7 +261,7 @@ class Picture:
         self.label['image']=obraz43
         obraz43.image=obraz43
 
-        self.pole_tekstowe.configure(text="3 raz? Nie masz jeszcze dosyć?!\nTo teraz czas na wykład... no chyba, że masz mocną głowę..?")
+        self.pole_tekstowe.configure(text=" Nie masz już dosyć?!\nTo teraz czas na wykład... no chyba, że masz mocną głowę..?")
         self.przycisk_1.configure(text="piwo", command=self.obraz44)
         self.przycisk_2.configure(text="wykład", command=self.obraz21)
 
@@ -270,7 +270,7 @@ class Picture:
         self.label['image']=obraz44
         obraz44.image=obraz44
 
-        self.pole_tekstowe.configure(text="4 piwa! Dobry jesteś\n To teraz czas na wykład... a może jedak jeszcze jedno?")
+        self.pole_tekstowe.configure(text="4 piwa! Dobry jesteś\n To teraz już chyba wrócisz na wykłąd?\n A może jedak jeszcze jedno piwo?")
         self.przycisk_1.configure(text="piwo", command=self.obraz45)
         self.przycisk_2.configure(text="wykład", command=self.obraz21)
 
@@ -279,7 +279,7 @@ class Picture:
         self.label['image']=obraz45
         obraz45.image=obraz45
 
-        self.pole_tekstowe.configure(text="No po piątym piwie już nie masz wyjścia...")
+        self.pole_tekstowe.configure(text="Chyba już Ci wystarczy. Wracasz na wykład")
         self.przycisk_1.configure(text="wykład", command=self.obraz21)
         self.przycisk_2.configure(text="",state="disabled",bg='grey')
 
@@ -288,7 +288,7 @@ class Picture:
         self.label['image']=obraz21
         obraz21.image=obraz21
 
-        self.pole_tekstowe.configure(text="witaj na wykładzie. Zajmij miejsce")
+        self.pole_tekstowe.configure(text="Jesteś na wykładzie. Zajmij miejsce")
         self.przycisk_1.configure(text="Przód", command=self.obraz22)
         self.przycisk_2.configure(text="Tył", command=self.obraz22,state='normal',bg='yellow')
 
@@ -297,17 +297,17 @@ class Picture:
         self.label['image']=obraz22
         obraz22.image=obraz22
 
-        self.pole_tekstowe.configure(text="Profesorowi zepsuł się rzutnik.\nCo zrobić?")
-        self.przycisk_1.configure(text="Zignoruj", command=self.obraz24)
-        self.przycisk_2.configure(text="Napraw", command=self.obraz23)
+        self.pole_tekstowe.configure(text="Podczas wykładu Profesor myśli, \n że projektor się zepsuł ale Ty wiesz co zrobić, by zaczął działać.\n Pomożesz mu?")
+        self.przycisk_1.configure(text="Nie pomoe", command=self.obraz24)
+        self.przycisk_2.configure(text="Pomogę", command=self.obraz23)
 
     def obraz23(self):
         obraz23=PhotoImage(file="14.1.Naprawiłeś_rzutnik.png",width=600,height=500)
         self.label['image']=obraz23
         obraz23.image=obraz23
 
-        self.pole_tekstowe.configure(text="Super uwu")
-        self.przycisk_1.configure(text="koniec wykładu", command=self.obraz25)
+        self.pole_tekstowe.configure(text="Super! <3")
+        self.przycisk_1.configure(text="Koniec wykładu", command=self.obraz25)
         self.przycisk_2.configure(text="                           ", state="disabled", bg="grey")
 
     def obraz24(self):
@@ -315,8 +315,8 @@ class Picture:
         self.label['image']=obraz24
         obraz24.image=obraz24
 
-        self.pole_tekstowe.configure(text="Meh")
-        self.przycisk_1.configure(text="koniec wykładu", command=self.obraz25)
+        self.pole_tekstowe.configure(text="Meh :c")
+        self.przycisk_1.configure(text="Koniec wykładu", command=self.obraz25)
         self.przycisk_2.configure(text="                           ", state="disabled", bg="grey")
 
     def obraz25(self):
@@ -324,8 +324,8 @@ class Picture:
         self.label['image']=obraz25
         obraz25.image=obraz25
 
-        self.pole_tekstowe.configure(text="Czas na egzamin")
-        self.przycisk_1.configure(text="Zacznij pisać", command=self.obraz46)
+        self.pole_tekstowe.configure(text="Podejmowane przez Ciebie decyzje podczas semestru nie były łatwe, \n ale w końcu nadszedł czas egzaminów.")
+        self.przycisk_1.configure(text="Zacznij pisać ", command=self.obraz46)
         self.przycisk_2.configure(text="                           ", state="disabled", bg="grey")
 
     def obraz46(self):
@@ -333,18 +333,18 @@ class Picture:
         self.label['image']=obraz46
         obraz46.image=obraz46
 
-        self.pole_tekstowe.configure(text="Ponieważ wolałeś albo wolałeś piwo, albo egzamin jest naprawdę trudny musisz zdecydować:\nściągać i mieć x% szans na zdanie\nlub nie ściągać i mieć y% szans na zdanie")
-        self.przycisk_1.configure(text="ściągać",bg='yellow',command=self.obraz26)
-        self.przycisk_2.configure(text="piszę sam - jakoś to będzie",bg="yellow",command=self.obraz27,state='normal')
+        self.pole_tekstowe.configure(text="Podejmowane przez Ciebie wybory sprawiły, \n że dziś nie jesteś dobrze przygotowany na egzamin \n i jeśli nie dopisze Ci szczęście to prawdopodobnie go oblejesz,\n jednak masz szansę ściągnąć. Co wybierzesz?")
+        self.przycisk_1.configure(text="Ściągam!",bg='yellow',command=self.obraz26)
+        self.przycisk_2.configure(text="Nie ściągam! Jakoś dam radę...",bg="yellow",command=self.obraz27,state='normal')
 
     def obraz26(self):
         obraz26=PhotoImage(file="16.1.Przyłapany na ściąganiu.png",width=600,height=500)
         self.label['image']=obraz26
         obraz26.image=obraz26
 
-        self.pole_tekstowe.configure(text="O nie! Zostałeś przyłapany na ściąganiu. Idzie w twoją stronę profesor..")
-        self.przycisk_1.configure(text="przyznaj się", command=self.obraz31)
-        self.przycisk_2.configure(text="uciekaj", command=self.obraz31)
+        self.pole_tekstowe.configure(text="Niestety szczęście Ci nie dopisało i wykładowca zauważył, \n że siągasz. Idzie w twoją stronę profesor...")
+        self.przycisk_1.configure(text="Przyznam się!", command=self.obraz31)
+        self.przycisk_2.configure(text="Ucieknę... może zapomni", command=self.obraz31)
         self.przycisk_3.destroy()
 
     def obraz27(self):
@@ -352,9 +352,9 @@ class Picture:
         self.label['image']=obraz27
         obraz27.image=obraz27
 
-        self.pole_tekstowe.configure(text="Zdałeś, wybierz prowadzących na następny semestr")
-        self.przycisk_1.configure(text="Francuz", command = self.obraz33)
-        self.przycisk_2.configure(text="Dżokej Instruktor", command= self.obraz34)
+        self.pole_tekstowe.configure(text="Udaje Ci się zdać!\n Wybierz swojego nowego prowadzącego od programowania.")
+        self.przycisk_1.configure(text="Francuz!", command = self.obraz33)
+        self.przycisk_2.configure(text="Dżokej Instruktor!", command= self.obraz34)
         self.przycisk_3.destroy()
 
     def obraz28(self):
@@ -363,8 +363,8 @@ class Picture:
         obraz28.image=obraz28
 
         self.pole_tekstowe.configure(text="")
-        self.przycisk_1.configure(text="Pa Pa",command = self.obraz29)
-        self.przycisk_2.configure(text="Zacznij jeszcze raz", command = self.obraz1)
+        self.przycisk_1.configure(text="Niestety nie zdajesz. Musisz zacząć studia od nowa :c",command = self.obraz29)
+        self.przycisk_2.configure(text="Zacznę jeszcze raz", command = self.obraz1)
         self.przycisk_3.destroy()
 
     def obraz31(self):
@@ -372,8 +372,8 @@ class Picture:
         self.label['image']=obraz31
         obraz31.image=obraz31
 
-        self.pole_tekstowe.configure(text="Zostałeś przyłapany na śiąganiu! Wylatujesz!")
-        self.przycisk_1.configure(text="Pa Pa",command = self.autorzy)
+        self.pole_tekstowe.configure(text="Zostałeś przyłapany na śiąganiu! Profesor wyprasza Cię z sali")
+        self.przycisk_1.configure(text="Żegnaj przyjacielu :c",command = self.autorzy)
         self.przycisk_2.destroy()
 
     # def obraz32(self):
@@ -390,8 +390,8 @@ class Picture:
         self.label['image']=obraz33
         obraz33.image=obraz33
 
-        self.pole_tekstowe.configure(text="Oto twój wybór! Francuz")
-        self.przycisk_1.configure(text="Idę na zajęcia!", command = self.obraz35)
+        self.pole_tekstowe.configure(text="Oto twój wybór! Francuz :) ")
+        self.przycisk_1.configure(text="Idę na zajęcia! ", command = self.obraz35)
         self.przycisk_2.configure(text="                           ", state="disabled",bg="grey")
 
     def obraz34(self):
@@ -399,8 +399,8 @@ class Picture:
         self.label['image']=obraz34
         obraz34.image=obraz34
 
-        self.pole_tekstowe.configure(text="Oto twój wybór! Dżokej instruktor")
-        self.przycisk_1.configure(text="Idę na zajęcia!", command = self.obraz35)
+        self.pole_tekstowe.configure(text="Oto twój wybór! Dżokej instruktor!")
+        self.przycisk_1.configure(text="Idę na zajęcia! ", command = self.obraz35)
         self.przycisk_2.configure(text="                           ", state="disabled",bg="grey")
 
     def obraz35(self):
@@ -408,40 +408,40 @@ class Picture:
         self.label['image']=obraz35
         obraz35.image=obraz35
 
-        self.pole_tekstowe.configure(text="To był ten łatwy wybór...\nO tym że mówilismy o tym że studia to czas wyborów itd")
-        self.przycisk_1.configure(text="Jestem gotowy",command=self.obraz36)
-        self.przycisk_2.configure(text="Nie jestem gotowy", state="normal",bg="yellow",command=self.obraz36)
+        self.pole_tekstowe.configure(text="Od dzisiaj już nic nie będzie takie samo... \n (UWAGA: Twrócy gry nie biorą na siebie odpowiedzialności \n za ewentualne szkody psychiczne.)")
+        self.przycisk_1.configure(text="Jestem gotowy!",command=self.obraz36)
+        self.przycisk_2.configure(text="Nie jestem gotowy...", state="normal",bg="yellow",command=self.obraz36)
 
     def obraz36(self):
         obraz36=PhotoImage(file="22.2.DylematMoralny.png",width=600,height=500)
         self.label['image']=obraz36
         obraz36.image=obraz36
 
-        self.pole_tekstowe.configure(text="Na pewno??")
-        self.przycisk_1.configure(text="Jestem gotowy",command=self.obraz37)
-        self.przycisk_2.configure(text="Zabierzcie mnie stąd...", state="normal",bg="yellow",command=self.obraz37)
+        self.pole_tekstowe.configure(text="Na pewno?")
+        self.przycisk_1.configure(text="Tak! Jestem gotowy!",command=self.obraz37)
+        self.przycisk_2.configure(text="Zabierzcie mnie stąd... :(", state="normal",bg="yellow",command=self.obraz37)
 
     def obraz37(self):
         obraz37=PhotoImage(file="22.ProblemWagonika.png",width=600,height=500)
         self.label['image']=obraz37
         obraz37.image=obraz37
 
-        self.pole_tekstowe.configure(text="Problem wagonika") #tutaj Asia proszę wstaw na opis na czym to polega :)
-        self.przycisk_1.configure(text="nic nie rób",command=self.obraz38)
-        self.przycisk_2.configure(text="przesuń dźwignię",command=self.obraz38, state="normal",bg="yellow")
+        self.pole_tekstowe.configure(text="Pociąg jedzie z pełną prędkością.\n  Na jego trasie do torów przywiązanych jest 5 osób.\n  Możesz zmienić trasę pociągu, jednak wtedy rozbije się on o skałę,\n a w raz z nim jedyna osoba będąca w środku - Twój przyjaciel.\n Co wybierasz?") #tutaj Asia proszę wstaw na opis na czym to polega :)
+        self.przycisk_1.configure(text="Nie zmieniam trasy. \n Pociąg zabija 5 osób, ale mój przyjaciel przeżyje.",command=self.obraz38)
+        self.przycisk_2.configure(text="Zmieniam trasę i uśmiercam przyjaciela, \n lecz ratuję 5 obcych osób.",command=self.obraz38, state="normal",bg="yellow")
 
     def obraz38(self):
         obraz38=PhotoImage(file="23.W twoich rękach.png",width=600,height=500)
         self.label['image']=obraz38
         obraz38.image=obraz38
 
-        self.pole_tekstowe.configure(text="Mam nadzieję, że nie żalujesz decyzji.\nMy ci nie powiemy co powinienieś zrobić.\nWszystko w twoich rękach...")
+        self.pole_tekstowe.configure(text="Teraz wszystko jest w Twoich rękach...")
         self.przycisk_1.configure(text="Napisy końcowe", command = self.autorzy)
         self.przycisk_2.destroy()
 
     def autorzy(self):
-        self.pole_tekstowe.configure(text="tytuł, autorzy, muzyka etc") #tu wszystkie dane wiadomo
-        self.przycisk_1.configure(text="Wyjdź",command=self.wyjscie)
+        self.pole_tekstowe.configure(text="KONIOWISTYKA \n \n Joanna Depta \n Alicja Raczunas\n Zosia Trafas \n Weronika Wojtas ") #tu wszystkie dane wiadomo
+        self.przycisk_1.configure(text="Wyjdź z gry",command=self.wyjscie)
         self.przycisk_2.destroy()
 
     def wyjscie(self):
