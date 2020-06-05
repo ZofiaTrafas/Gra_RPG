@@ -436,8 +436,8 @@ class Picture:
         obraz38.image=obraz38
 
         self.pole_tekstowe.configure(text="Mam nadzieję, że nie żalujesz decyzji.\nMy ci nie powiemy co powinienieś zrobić.\nWszystko w twoich rękach...")
-        self.przycisk_1.destroy()
-        self.przycisk_2.configure(text="Napisy końcowe", command = self.autorzy)
+        self.przycisk_1.configure(text="Napisy końcowe", command = self.autorzy)
+        self.przycisk_2.destroy()
 
     def autorzy(self):
         self.pole_tekstowe.configure(text="tytuł, autorzy, muzyka etc") #tu wszystkie dane wiadomo
