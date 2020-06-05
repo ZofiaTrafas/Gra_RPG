@@ -202,7 +202,7 @@ class Picture:
 
         self.pole_tekstowe.configure(text="Zapis na w-f")
         self.przycisk_1.configure(text="Joga na koniach",command=self.obraz18)
-        self.przycisk_2.configure(text="Wyścigi konne", state="normal", bg="green",command=self.obraz19)
+        self.przycisk_2.configure(text="Wyścigi konne", state="normal", bg="yellow",command=self.obraz19)
 
         self.przycisk_3 = Button(self.parent, text = "Praca w stajni", bg = "yellow",state='normal',command=self.obraz17)
         self.przycisk_3.place(x=150,y=400)
@@ -219,7 +219,7 @@ class Picture:
         self.przycisk_3.destroy()
 
     def obraz18(self):
-        obraz18=PhotoImage(file="11.2.Joga na koniach.png",width=600,height=500)
+        obraz18=PhotoImage(file="11.3.Joga na koniach.png",width=600,height=500)
         self.label['image']=obraz18
         obraz18.image=obraz18
 
@@ -443,7 +443,7 @@ class Picture:
 
     def autorzy(self):
         self.pole_tekstowe.configure(text="tytuł, autorzy, muzyka etc") #tu wszystkie dane wiadomo
-        self.przycisk_1.destroy()
+        self.przycisk_1.destroy(text="Wyjdź",command=self.wyjscie)
         self.przycisk_2.destroy()
 
 def main():
