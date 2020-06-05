@@ -388,7 +388,7 @@ class Picture:
     #     self.przycisk_2.configure(text="")
 
     def obraz33(self):
-        obraz33=PhotoImage(file="20.Francuz.png",width=600,height=500)
+        obraz33=PhotoImage(file="21.1.Francuz.png",width=600,height=500)
         self.label['image']=obraz33
         obraz33.image=obraz33
 
@@ -437,7 +437,7 @@ class Picture:
         self.label['image']=obraz38
         obraz38.image=obraz38
 
-        self.pole_tekstowe.configure(text="Mam nadzieję, że nie żalujesz decyzji. My ci nie powiemy co powinienieś zrobić. Wszystko w twoich rękach...")
+        self.pole_tekstowe.configure(text="Mam nadzieję, że nie żalujesz decyzji.\nMy ci nie powiemy co powinienieś zrobić.\nWszystko w twoich rękach...")
         self.przycisk_1.destroy()
         self.przycisk_2.configure(text="Napisy końcowe", command = self.autorzy)
 
