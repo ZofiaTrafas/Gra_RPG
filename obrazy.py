@@ -441,8 +441,11 @@ class Picture:
 
     def autorzy(self):
         self.pole_tekstowe.configure(text="tytuł, autorzy, muzyka etc") #tu wszystkie dane wiadomo
-        self.przycisk_1.destroy(text="Wyjdź",command=self.wyjscie)
+        self.przycisk_1.configure(text="Wyjdź",command=self.wyjscie)
         self.przycisk_2.destroy()
+
+    def wyjscie(self):
+        self.parent.quit()
 
 def main():
     okno_gry= Tk()
