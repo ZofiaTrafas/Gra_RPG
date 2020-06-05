@@ -298,7 +298,7 @@ class Picture:
         obraz22.image=obraz22
 
         self.pole_tekstowe.configure(text="Podczas wykładu Profesor myśli, \n że projektor się zepsuł ale Ty wiesz co zrobić, by zaczął działać.\n Pomożesz mu?")
-        self.przycisk_1.configure(text="Nie pomoe", command=self.obraz24)
+        self.przycisk_1.configure(text="Nie pomogę", command=self.obraz24)
         self.przycisk_2.configure(text="Pomogę", command=self.obraz23)
 
     def obraz23(self):
@@ -408,7 +408,7 @@ class Picture:
         self.label['image']=obraz35
         obraz35.image=obraz35
 
-        self.pole_tekstowe.configure(text="Od dzisiaj już nic nie będzie takie samo... \n (UWAGA: Twrócy gry nie biorą na siebie odpowiedzialności \n za ewentualne szkody psychiczne.)")
+        self.pole_tekstowe.configure(text=" Ó̷͔̲̱͙̪̤̋͆̿̿́̄̑͜d̶̢̟̥̦͚̞͔̋̈́̋̀͒͗̎̐̕ ̸̡͖̦̬̖̘̳͑̇̈́͝d̸̜͐̑͐́͊̚ͅz̵͙̙̙͊̍̔̽̿́̀̕ͅì̶̺̙͇̪͓͍̖͔̎̆s̵̫̫̜͚̲͝i̸̩̪̦͚͙̳̖̾̃̈́͝á̶͎̰̥̈́̄̐͘͝j̵̧̡̛̱͎̠͚̳̽̍̋͘͜͜͝͝ ̵͙͔͎͇̇̋͂̀̚͘j̷̮̗̼̀̆͒̇u̷͉̪͗̓̈́̈͆̿̀̿͐͆ż̴̭̮̜̺̖̋̚ ̴̨̛̣̮̾͛̆̋́ņ̵̹̺̟̪͂ͅī̷̦̈́̌͝ċ̶͔͖̼̪̤̹̥͕̹̈́́́͛ ̴̨̧̠̘͉̤̼̯̏͑̑ͅn̴̬̩̯̰͖̬̤͗i̷̳̹͚͑̂̓ę̸̳̬̃̀ ̵̧͚͕͔̳͖͑͑͂̇̀̈͜b̴̜̑̀̈̇͑̀̎ę̸͉̬̬̎̀̔̉̈̎̀̄d̵̫̈̓z̷͎͕͉͕̻̕ị̶̡̛̹̋̈́̌̋̒͛͆e̶̙̗̰̗̩̦̦͙͆͜ ̷̜͆̊̌͝ţ̵̘̠̬̎͌͆̋͐͘͠a̶͇̣̿̎̒̏͂̿͘ͅk̴̬̠̖̖͍̻̲͇̅̍͒̋̑͆̃͠ͅͅi̸̛̦͌̉̏̏̽͊̚e̷̡̻̣͗̔͑̏̋̃̕ͅ ̷̡̼̘̮̹̰̳̣̠̇s̸̢̼͎̤̰̰̘̏̽̆ả̶̓mo \n\n(UWAGA: Twrócy gry nie biorą na siebie odpowiedzialności \n za ewentualne szkody psychiczne.)")
         self.przycisk_1.configure(text="Jestem gotowy!",command=self.obraz36)
         self.przycisk_2.configure(text="Nie jestem gotowy...", state="normal",bg="yellow",command=self.obraz36)
 
@@ -426,7 +426,7 @@ class Picture:
         self.label['image']=obraz37
         obraz37.image=obraz37
 
-        self.pole_tekstowe.configure(text="Pociąg jedzie z pełną prędkością.\n  Na jego trasie do torów przywiązanych jest 5 osób.\n  Możesz zmienić trasę pociągu, jednak wtedy rozbije się on o skałę,\n a w raz z nim jedyna osoba będąca w środku - Twój przyjaciel.\n Co wybierasz?") #tutaj Asia proszę wstaw na opis na czym to polega :)
+        self.pole_tekstowe.configure(text="P̷̬̪̾̒̄̀͂̀̔ơ̴̢̖̹̦͑̆c̴̢̦̰̪͖͍̬̺̹͊̍ḯ̸̛̝͇̈̎̌̕ͅą̷̝͒̽̏͌̈͌͘g̴̗̣̬̣̞̠̣̗̘͛͗̓́̀̈́̓͝ ̶̜̈̐͂̈́j̶͙͙͖̺̙̃̐̄ë̶̡̫͍̪́̕ͅd̷̢̺̖̟͋̇͂̋͂̈́̂̍̚͝z̴̲̭̣̗͚̮̠͇̯̔́͌̉͆͐͂̊͆ì̵̛͎̪̯̰͔̮͚̱̠̂̿͋͗͌̏̀̑͜ę̶̻̳̝͉͔͗ ̶̧̣̠̙̯̙̟͑͜͜z̴̨̫͈͍͕̜̫͋͜ ̸̠̩̘̬͐̏͒̚ͅp̶̨̲̳̎̀̈́͊͑̄̊ȩ̷̧̝͇͎͕̉̄̏̕͜ł̶̹̝̩̏̓n̸̢̦͂̓͠ͅą̴̡͎̼̞̺͎̘͈͈̌̅͋́̈͑̈ ̶̣̫̳̥̤̹̘̟̦̭̈̃͒͆́̓̒̐p̵̪̭̳̪̙̦̻͝r̵̺̮͙̫̝̟͎̞̋͝ę̵͍͗̎͘ḑ̴̨̮̦̈́̒̅͂̏̌̂̚͝͠ķ̶̖̗̠̙͔̐̏͋̚o̸̟̲͇͐ś̸̭̩̘̠͓̩̞̽̈́̆c̶̦͇̰͔̽̔̔͘͜i̵̢̥̎̓̂̔ą̷̻̝̣͌.̵͍̲̪̏̐̎̊̆̃͂̌͋̑\n  Na jego trasie do torów przywiązanych jest 5 osób.\n  Możesz zmienić trasę pociągu, jednak wtedy rozbije się on o skałę,\n a w raz z nim jedyna osoba będąca w środku - Twój przyjaciel.\n Co wybierasz?") #tutaj Asia proszę wstaw na opis na czym to polega :)
         self.przycisk_1.configure(text="Nie zmieniam trasy. \n Pociąg zabija 5 osób, ale mój przyjaciel przeżyje.",command=self.obraz38)
         self.przycisk_2.configure(text="Zmieniam trasę i uśmiercam przyjaciela, \n lecz ratuję 5 obcych osób.",command=self.obraz38, state="normal",bg="yellow")
 
@@ -435,7 +435,7 @@ class Picture:
         self.label['image']=obraz38
         obraz38.image=obraz38
 
-        self.pole_tekstowe.configure(text="Teraz wszystko jest w Twoich rękach...\n “Nie ma odwagi bez dylematu lub charakteru,\n który nie jest ukształtowany przez wybory bardziej niż przez zwycięstwa”.\n -Muriel Barbery")
+        self.pole_tekstowe.configure(text="Ţ̶͎̼̟̖̟̈́̽̊e̴̢̳̦̭̘̓̓̓̀r̴̡̨̧̢̭͈͍̼̻͂̓̌̉ä̵̪̖̻͙͈̼̪͖̠́́̐͒́̒̏z̵̲̥͖͉̖̯͖̭̎͂̿̉̓͜ ̷̳͈͇̮̲̣̝͓̇̌̌̐͜w̸̡̮͙̰̼̓̀͝s̷̰̉z̴̛̰̲̩̰͖̤̮̎͋̃͝ÿ̶̱̗̺̼̜̖̯̮͕́̒̈́̑͜s̷̖̲̫͇͓̗̳͈͉̏̍̎͒͂̇̅̅͊͠t̷̰̥͓̠̻̩͕̋͊͊̽̍͋̚ͅk̷̠̯̼̽̈͛͘͝ỏ̵̡̭̣̖̻̝̱͛͆̽̋͠ ̴̨͉̘̣̟͈͈̲̠͙́̒̇̈́̏̉͠j̶̠͈̰͕̀͋̂͐͗͠e̵̬̗͍̻͍̐͗̈́̉͒̈́̑̐͠s̸̖̘̪͔͖͛͌̀̆ͅţ̵̪̳̰̼͎̼̈́́̒̈́̇͊͛̊̅ ̴͈̜̱̣̯̳̫́̏̾̈́̄͆͘͜͠w̴̨͉̖͖̍͋̇̿͛͜͝͝ ̶̦̻̣̹͇̈́̈́̋͆̅͌̏̕T̸̢̡̟͖̹̟͑́̇̇́w̷̛̯̹̦̣̿̒͒̇͝ò̵̢̤͙̇̔̊ĩ̶͖̲͕̥͓ç̵͎̹͔̥̜̙̖̮̒̀͐͋̉h̷͚̩̻̹̩͆͛̐̆͝ͅ ̸̗̒̂r̵̛̼̥͈͕̭ę̴͎̼͍̞̥̣͖̅͊̊̕ͅk̸̛̪̭̩̆́́̇̈́̓͆a̴͕̝̞͍͇͕̰͗̿̓̄̾̏͘͠ĉ̶h\n “Nie ma odwagi bez dylematu lub charakteru,\n który nie jest ukształtowany przez wybory bardziej niż przez zwycięstwa”.\n -Muriel Barbery")
         self.przycisk_1.configure(text="Napisy końcowe", command = self.autorzy)
         self.przycisk_2.destroy()
 
@@ -557,4 +557,3 @@ contents1.pack()
 odtwarzacz.mainloop()
 
 """
-
