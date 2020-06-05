@@ -336,8 +336,6 @@ class Picture:
         self.pole_tekstowe.configure(text="Ponieważ wolałeś albo wolałeś piwo, albo egzamin jest naprawdę trudny musisz zdecydować:\nściągać i mieć x% szans na zdanie\nlub nie ściągać i mieć y% szans na zdanie")
         self.przycisk_1.configure(text="ściągać",bg='yellow',command=self.obraz26)
         self.przycisk_2.configure(text="piszę sam - jakoś to będzie",bg="yellow",command=self.obraz27,state='normal')
-        self.przycisk_3=Button(self.parent, text="wolałbym byc teraz na piwie...", bg="yellow", command=self.obraz28)
-        self.przycisk_3.pack()
 
     def obraz26(self):
         obraz26=PhotoImage(file="16.1.Przyłapany na ściąganiu.png",width=600,height=500)
