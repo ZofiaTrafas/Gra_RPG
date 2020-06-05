@@ -435,7 +435,7 @@ class Picture:
         self.label['image']=obraz38
         obraz38.image=obraz38
 
-        self.pole_tekstowe.configure(text="Teraz wszystko jest w Twoich rękach...")
+        self.pole_tekstowe.configure(text="Teraz wszystko jest w Twoich rękach...\n “Nie ma odwagi bez dylematu lub charakteru,\n który nie jest ukształtowany przez wybory bardziej niż przez zwycięstwa”.\n -Muriel Barbery")
         self.przycisk_1.configure(text="Napisy końcowe", command = self.autorzy)
         self.przycisk_2.destroy()
 
